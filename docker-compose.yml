@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  ecommerce-app:
+    build: .
+    container_name: ecommerce_bem_app
+    ports:
+      - "8080:80"
+    volumes:
+      - ./ECommerceBem.Infrastructure/SQL:/app/ECommerceBem.Infrastructure/SQL
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
